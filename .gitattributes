@@ -1,0 +1,10 @@
+# encrypt artifact-signing-key.pem
+artifact-signing-key.pem filter=git-crypt diff=git-crypt 
+# encrypt artifact-verify-key.pem
+artifact-verify-key.pem filter=git-crypt diff=git-crypt
+# encrypt private.key
+private.key filter=git-crypt diff=git-crypt
+# encrypt public.key
+public.key filter=git-crypt diff=git-crypt
+# Making sure that .gitattributes is never encrypted. DON'T TOUCH THAT LINE AND ONE BELOW
+.gitattributes !filter !diff
